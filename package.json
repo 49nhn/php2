@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "flowbite": "^1.6.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \" php -S localhost:8080\" \"tailwindcss -i public/style/input.css -o public/style/output.css --watch\""
+  }
+}
