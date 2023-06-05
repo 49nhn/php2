@@ -1,5 +1,4 @@
 <?php
-
 require_once "Controllers/BaseController.php";
 
 //Default controller and action
@@ -12,5 +11,6 @@ if (isset($_GET["controller"])) {
 }
 
 require_once "Controllers/$controller.php";
+
 $obj = new $controller();
 $obj->$action();

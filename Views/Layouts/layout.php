@@ -16,10 +16,11 @@
 </head>
 <body>
     <?php require_once "Views/Components/header.php"; ?>
-    <br>
-    <br>
-    <main class="container mx-auto mt-6">
-        <?php require_once $view; ?>
+    <main class="pt-[68px] dark:bg-slate-700">
+        <div class="container mx-auto min-h-[calc(100vh-257px-68px)] pb-5">
+
+            <?php require_once $view; ?>
+        </div>
     </main>
     <?php require_once "Views/Components/footer.php"; ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
