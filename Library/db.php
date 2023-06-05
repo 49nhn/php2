@@ -1,10 +1,11 @@
 <?php
 class db
 {
-    const DB_HOST = 'localhost';
-    const DB_NAME = 'store_php';
-    const DB_USER = 'root';
-    const DB_PASS = '';
+    const db_host = 'containers-us-west-73.railway.app';
+    const db_name = 'railway';
+    const db_username = 'root';
+    const port = "5911";
+    const db_password = 'mWmWQfVYx0cXNmHowbQw';
     private static $instance = NULL;
     public function __construct()
     {
@@ -16,7 +17,7 @@ class db
     {
         try {
             if (!isset(self::$instance)) {
-                self::$instance = new PDO("mysql:host=" . self::DB_HOST . ";dbname=" . self::DB_NAME, self::DB_USER, self::DB_PASS);
+                self::$instance = new PDO('mysql:host=' . self::db_host . '; port=' . self::port . '; dbname=' . self::db_name, self::db_username, self::db_password);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
         } catch (PDOException $e) {
