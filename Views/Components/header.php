@@ -1,4 +1,3 @@
-
 <button id="theme-toggle" type="button"
     class="text-gray-500 dark:text-gray-400 bg-black dark:bg-white rounded-full text-sm p-2.5 fixed bottom-6 right-6 group">
     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -68,8 +67,20 @@
             </a>
             <div class="flex md:order-2">
                 <button type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
-                    started</button>
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="25px"
+                        viewBox="0 0 40 36" style="enable-background:new 0 0 40 36;" xml:space="preserve">
+                        <g id="Page-1_4_" sketch:type="MSPage">
+                            <g id="Desktop_4_" transform="translate(-84.000000, -410.000000)"
+                                sketch:type="MSArtboardGroup">
+                                <path id="Cart" sketch:type="MSShapeGroup" class="st0" style="fill:#FFFFFF;"
+                                    d="M94.5,434.6h24.8l4.7-15.7H92.2l-1.3-8.9H84v4.8h3.1l3.7,27.8h0.1
+            c0,1.9,1.8,3.4,3.9,3.4c2.2,0,3.9-1.5,3.9-3.4h12.8c0,1.9,1.8,3.4,3.9,3.4c2.2,0,3.9-1.5,3.9-3.4h1.7v-3.9l-25.8-0.1L94.5,434.6" />
+                            </g>
+                        </g>
+                    </svg>
+                </button>
                 <button data-collapse-toggle="navbar-sticky" type="button"
                     class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-sticky" aria-expanded="false">

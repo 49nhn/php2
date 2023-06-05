@@ -6,12 +6,7 @@ class db
     const DB_USER = 'root';
     const DB_PASS = '';
     private static $instance = NULL;
-    public function __construct()
-    {
-    }
-    private function __clone()
-    {
-    }
+    
     public static function getInstance()
     {
         try {
