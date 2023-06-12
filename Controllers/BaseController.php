@@ -17,5 +17,11 @@ class BaseController
         $path = str_replace(".", "/", $path);
         return self::PATH_VIEW . "/" . $path . ".php";
     }
+    public function getMenu()
+    {
+        $categoryModel = new Category();
+        $categories = $categoryModel->getAllCategory();
+        return $categories;
+    }
 
 }

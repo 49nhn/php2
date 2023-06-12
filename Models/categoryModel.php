@@ -1,50 +1,58 @@
 <?php
 require_once "./Library/db.php";
-class Products extends db
+
+class Category extends db
 {
-    public function getAllProducts()
+    public function getAllCategory()
     {
-        $sql = "SELECT * FROM products";
+        $sql = "SELECT * FROM categories";
         $stmt = db::getInstance()->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
-    public function getProductById($id)
+    public function getCategoryById($id)
     {
-        $sql = "SELECT * FROM products WHERE id = :id";
+        $sql = "SELECT * FROM categories WHERE id = :id";
         $stmt = db::getInstance()->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
-    public function addProduct($name, $price, $description, $image)
+    public function addCategory($name, $description)
     {
-        $sql = "INSERT INTO products (name, price, description, image) VALUES (:name, :price, :description, :image)";
+        $sql = "INSERT INTO categories (name, description) VALUES (:name, :description)";
         $stmt = db::getInstance()->prepare($sql);
         $stmt->bindParam(':name', $name);
-        $stmt->bindParam(':price', $price);
         $stmt->bindParam(':description', $description);
-        $stmt->bindParam(':image_url', $image);
         $stmt->execute();
     }
-    public function updateProduct($id, $name, $price, $description, $image)
+    public function updateCategory($id, $name, $description)
     {
-        $sql = "UPDATE products SET name = :name, price = :price, description = :description, image = :image WHERE id = :id";
+        $sql = "UPDATE categories SET name = :name, description = :description WHERE id = :id";
         $stmt = db::getInstance()->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':name', $name);
-        $stmt->bindParam(':price', $price);
         $stmt->bindParam(':description', $description);
-        $stmt->bindParam(':image_url', $image);
         $stmt->execute();
     }
-    public function deleteProduct($id)
+    public function deleteCategory($id)
     {
-        $sql = "DELETE FROM products WHERE id = :id";
+        $sql = "DELETE FROM categories WHERE id = :id";
         $stmt = db::getInstance()->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
     }
+    public function getProductsByCategory($id)
+    {
+        $sql = "SELECT * FROM products WHERE category_id = :id";
+        $stmt = db::getInstance()->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    
+
 }
